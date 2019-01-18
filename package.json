@@ -55,5 +55,12 @@
     "gatsby-plugin-eslint": "^2.0.3",
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn build",
+      "pre-commit": "exit 0",
+      "...": "..."
+    }
   }
 }
