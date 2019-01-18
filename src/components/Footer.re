@@ -30,7 +30,7 @@ let make = (_children) => {
           </strong>
           (str(" Blog and Sandbox by "))
           <a href="https://github.com/ThomasMarcel" target="_blank">
-            (str("Thomas Alcala"))
+            (str("Thomas Alcala Schneider"))
           </a>
           (str("."))
         </p>
