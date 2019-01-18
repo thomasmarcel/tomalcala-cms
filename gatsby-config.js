@@ -5,7 +5,7 @@ module.exports = {
   },
   plugins: [
     // 'gatsby-plugin-eslint',
-    'gatsby-plugin-reason',
+    // 'gatsby-plugin-reason',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
