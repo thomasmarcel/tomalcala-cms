@@ -10,7 +10,7 @@ import Footer from '../components/Footer.bs'
 
 const content = {
   title: 'Hello and Welcome!',
-  subtitle: "This is my personal portfolio and sandbox to test everything related to development, sounds cool, and that I have time for..."
+  subtitle: "This is my personal portfolio and sandbox to test new tools, frameworks, etc, everything development-related that sounds cool, and that I have time for..."
 }
 
 const TemplateWrapper = ({ children }) => (
