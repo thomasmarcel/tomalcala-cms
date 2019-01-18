@@ -26,7 +26,7 @@ let make = (_children) => {
       <div className="content has-text-centered">
         <p>
           <strong>
-            (str("TomALcala"))
+            (str("TomAlcala"))
           </strong>
           (str(" Blog and Sandbox by "))
           <a href="https://github.com/ThomasMarcel" target="_blank">
