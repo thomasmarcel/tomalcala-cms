@@ -61,7 +61,7 @@ const Navbar = class extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>Curious About the Source code?</span>&nbsp;&nbsp;
+          <span>Curious About the Source Code?</span>&nbsp;&nbsp;
           <span className="icon">
             <img src={github} alt="Github" />
           </span>
