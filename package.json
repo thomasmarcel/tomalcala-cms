@@ -70,7 +70,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn build",
+      "pre-push": "yarn bsb:build",
       "pre-commit": "exit 0",
       "...": "..."
     }
