@@ -34,7 +34,7 @@ export default class IndexPage extends React.Component {
                     <br />
                     <br />
                     <Link className="button is-normal" to={post.fields.slug}>
-                      Keep Reading →
+                      Keep Reading &nbsp;
                       <i className="fas fa-caret-right"></i>
                     </Link>
                   </p>
