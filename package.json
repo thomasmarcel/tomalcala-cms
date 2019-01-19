@@ -52,9 +52,12 @@
     "bsb:test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack -w",
     "webpack:production": "NODE_ENV=production webpack",
-    "webpack:server": "webpack-dev-server"
+    "webpack:server": "webpack-dev-server",
+    "lint": "yarn eslint *.js src"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.3.2",
+    "@commitlint/config-conventional": "^7.3.1",
     "@fortawesome/fontawesome-free": "^5.6.3",
     "babel-eslint": "^10.0.1",
     "bs-platform": "^4.0.18",
@@ -73,6 +76,7 @@
     "hooks": {
       "pre-push": "yarn bsb:build",
       "pre-commit": "exit 0",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "...": "..."
     }
   }
