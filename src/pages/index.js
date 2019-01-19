@@ -13,7 +13,10 @@ export default class IndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+              <h1 className="has-text-weight-bold is-size-2">
+                <i className="fas fa-rocket" />&nbsp;
+                Latest Stories
+              </h1>
             </div>
             {posts
               .map(({ node: post }) => (
@@ -27,6 +30,7 @@ export default class IndexPage extends React.Component {
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
+                    <i className="far fa-clock" />&nbsp;
                     <small>{post.frontmatter.date}</small>
                   </p>
                   <p>

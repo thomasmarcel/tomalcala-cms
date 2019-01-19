@@ -26,6 +26,7 @@ let make = (_children) => {
       <div className="content has-text-centered">
         <p>
           <strong>
+            <i className="far fa-copyright" />
             (str("TomAlcala"))
           </strong>
           (str(" Blog and Sandbox by "))
