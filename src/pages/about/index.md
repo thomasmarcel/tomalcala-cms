@@ -1,6 +1,8 @@
 ---
 templateKey: about-page
 title: About
+header: Get to Know
+subheader: Tom, the project, all what and why.
 ---
 ### This Guy
 I am a French/Mexican father, full stack developer, CTO @ [EEVET](https://eevet.com), usually working with MEAN/MERN, LEMP/LAMP (the P stands for Python, mostly), LEMR stacks. Some Machine Learning. Some Startups.  

@@ -2,6 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Hero from '../components/Hero'
+
+const content = {
+  header: 'Hello and Welcome!',
+  subheader: "This is my personal portfolio and sandbox to test new tools, frameworks, etc, everything development-related that sounds cool, and that I have time for..."
+}
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,6 +16,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+        <Hero content={content} />
         <section className="section">
           <div className="container">
             <div className="content">

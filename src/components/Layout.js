@@ -3,15 +3,9 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 
 import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
 import './all.sass'
 
 import Footer from '../components/Footer.bs'
-
-const content = {
-  title: 'Hello and Welcome!',
-  subtitle: "This is my personal portfolio and sandbox to test new tools, frameworks, etc, everything development-related that sounds cool, and that I have time for..."
-}
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -46,7 +40,6 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <Navbar />
-        <Hero content={content} />
         <div>{children}</div>
         <Footer />
       </div>
