@@ -35,6 +35,7 @@ const Navbar = class extends React.Component {
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item" title="Logo">
+          <i className="fab fa-empire fa-2x" />&nbsp;
           TomAlcala
           {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
         </Link>
