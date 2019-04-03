@@ -11,7 +11,7 @@ function str(prim) {
 
 var component = ReasonReact.statelessComponent("Post");
 
-function make(post, _children) {
+function make(post, index, _children) {
   return /* record */[
           /* debugName */component[/* debugName */0],
           /* reactClassInternal */component[/* reactClassInternal */1],
@@ -25,7 +25,7 @@ function make(post, _children) {
           /* render */(function (_self) {
               return React.createElement("div", {
                           key: post.id,
-                          className: "content",
+                          className: "content bg bg" + String(index),
                           style: {
                             borderBottom: "1px solid #333",
                             padding: "2em 4em"
@@ -57,7 +57,7 @@ function make(post, _children) {
 }
 
 var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
-        return make(jsProps.post, /* array */[]);
+        return make(jsProps.post, jsProps.index, /* array */[]);
       }));
 
 exports.str = str;

@@ -27,9 +27,9 @@ export default class IndexPage extends React.Component {
             </h1>
           </div>
           {posts
-            .map(({ node: post }) => (
+            .map(({ node: post }, index) => (
               <div key={post.id} >
-                <Post post={post} />
+                <Post post={post} index={index} />
               </div>
             ))}
         </div>

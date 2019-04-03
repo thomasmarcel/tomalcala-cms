@@ -28,13 +28,14 @@ let component = ReasonReact.statelessComponent("Post");
 [@bs.deriving abstract]
 type jsProps = {
   post: post,
+  index: int,
 };
 
-let make = (~post, _children) => {
+let make = (~post, ~index, _children) => {
   ...component,
   render: _self => {
     <div
-      className="content"
+      className=("content bg bg" ++ string_of_int(index))
       style=(ReactDOMRe.Style.make(~borderBottom="1px solid #333",
                                    ~padding="2em 4em", ()))
       key=(post->idGet)
@@ -74,6 +75,7 @@ let default =
   ReasonReact.wrapReasonForJs(~component, jsProps =>
     make(
       ~post=jsProps->postGet,
+      ~index=jsProps->indexGet,
       [||],
     )
   );
