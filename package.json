@@ -41,7 +41,7 @@
     "start": "yarn develop",
     "clean": "rimraf .cache public",
     "build:gatsby": "yarn clean && gatsby build",
-    "build": "yarn bsb:clean && yarn clean && yarn bsb:build && gatsby build",
+    "build": "yarn clean:bs && yarn clean && yarn build:bs && gatsby build",
     "develop": "yarn clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
