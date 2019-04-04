@@ -26,7 +26,7 @@ function make(post, index, _children) {
               return React.createElement("div", undefined, React.createElement("div", {
                               className: "bg-image bg" + String(index)
                             }, React.createElement("div", {
-                                  className: "layer"
+                                  className: "layer opacity-dark"
                                 })), React.createElement("div", {
                               key: post.id,
                               className: "content",

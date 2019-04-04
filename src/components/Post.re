@@ -36,7 +36,7 @@ let make = (~post, ~index, _children) => {
   render: _self => {
     <div>
       <div className=("bg-image bg" ++ string_of_int(index))>
-        <div className="layer" />
+        <div className="layer opacity-dark" />
       </div>
       <div
         className="content"
