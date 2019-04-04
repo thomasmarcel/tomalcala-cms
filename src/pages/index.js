@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Contact from '../components/Contact'
 import Post from '../components/Post.bs'
+import Simple from '../components/Simple.bs'
+import Social from '../components/Social.bs'
 
 const content = {
   header: 'Hello and Welcome!',
@@ -34,6 +36,20 @@ export default class IndexPage extends React.Component {
             ))}
         </div>
         <Contact />
+        <Simple
+          title="Resume"
+          body="Check out my resume! I am open for work and collaborations."
+          icon="fas fa-pen-alt"
+          action="/img/thomas_alcala-cv-201901-en-m.pdf"
+          background="simple0"
+        />
+        <Social
+          linkedin="https://www.linkedin.com/in/talcala"
+          github="https://github.com/ThomasMarcel"
+          slack="https://tomalcala.slack.com"
+          twitter="https://twitter.com/ThomasAlcala"
+          skype="https://join.skype.com/invite/xfKeFzPFWsND"
+        />
       </Layout>
     )
   }
