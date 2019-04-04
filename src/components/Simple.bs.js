@@ -2,9 +2,7 @@
 'use strict';
 
 var React = require("react");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var Gatsby$ReactTemplate = require("../bindings/Gatsby.bs.js");
 
 function str(prim) {
   return prim;
@@ -42,14 +40,17 @@ function make(title, body, direction, icon, background, action, _children) {
                                   className: "columns"
                                 }, React.createElement("div", {
                                       className: "column"
-                                    }, React.createElement("h1", undefined, title), React.createElement("p", undefined, body), ReasonReact.element(undefined, undefined, Gatsby$ReactTemplate.Link[/* make */0](Caml_option.some(action), "btn parallelogram has-background-link", undefined, /* array */[React.createElement("div", {
-                                                    className: "skew-fix"
-                                                  }, "Read More", React.createElement("i", {
-                                                        className: "fas fa-caret-right",
-                                                        style: {
-                                                          marginLeft: "10px"
-                                                        }
-                                                      }))]))), React.createElement("div", {
+                                    }, React.createElement("h1", undefined, title), React.createElement("p", undefined, body), React.createElement("a", {
+                                          className: "btn parallelogram has-background-link",
+                                          href: action
+                                        }, React.createElement("div", {
+                                              className: "skew-fix"
+                                            }, "Read More", React.createElement("i", {
+                                                  className: "fas fa-caret-right",
+                                                  style: {
+                                                    marginLeft: "10px"
+                                                  }
+                                                })))), React.createElement("div", {
                                       className: "column"
                                     }, React.createElement("h1", {
                                           className: "is-centered"

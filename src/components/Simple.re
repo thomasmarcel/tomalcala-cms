@@ -36,14 +36,14 @@ let make = (~title, ~body, ~direction, ~icon, ~background, ~action, _children) =
             <p>
               (str(body))
             </p>
-            <Link className="btn parallelogram has-background-link"
+            <a className="btn parallelogram has-background-link"
               href=(action) >
               <div className="skew-fix">
                 (str("Read More"))
                 <i className="fas fa-caret-right"
                 style=(ReactDOMRe.Style.make(~marginLeft="10px", ())) ></i>
               </div>
-            </Link>
+            </a>
           </div>
           <div className="column">
             <h1 className="is-centered">
