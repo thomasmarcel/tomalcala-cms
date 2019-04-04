@@ -25,7 +25,7 @@ function make(post, index, _children) {
           /* render */(function (_self) {
               return React.createElement("div", {
                           key: post.id,
-                          className: "content bg bg" + String(index),
+                          className: "content bg-image bg" + String(index),
                           style: {
                             borderBottom: "1px solid #333",
                             padding: "2em 4em"

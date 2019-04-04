@@ -35,7 +35,7 @@ let make = (~post, ~index, _children) => {
   ...component,
   render: _self => {
     <div
-      className=("content bg bg" ++ string_of_int(index))
+      className=("content bg-image bg" ++ string_of_int(index))
       style=(ReactDOMRe.Style.make(~borderBottom="1px solid #333",
                                    ~padding="2em 4em", ()))
       key=(post->idGet)

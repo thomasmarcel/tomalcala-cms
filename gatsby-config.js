@@ -80,6 +80,18 @@ module.exports = {
         develop: true,            // Activates purging in npm run develop
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
         printRejected: true,
+        whitelist: [
+          'bg0',
+          'bg1',
+          'bg2',
+          'bg3',
+          'bg4',
+          'bg5',
+          'bg6',
+          'bg7',
+          'bg8',
+          'bg9',
+        ]
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
