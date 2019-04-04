@@ -67,8 +67,12 @@ let make = (~post, ~index, _children) => {
           </div>
           <div className="column">
             <div className="is-pulled-right">
-              <i className="far fa-clock" />
-              <small>(str("  " ++ post->frontmatterGet->dateGet))</small>
+              <span className="tag is-link is-medium">
+                <i className="far fa-clock" />
+                <small style=(ReactDOMRe.Style.make(~marginLeft="10px", ())) >
+                  (str(post->frontmatterGet->dateGet))
+                </small>
+              </span>
             </div>
           </div>
         </div>

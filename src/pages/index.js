@@ -43,13 +43,6 @@ export default class IndexPage extends React.Component {
           background="simple0"
         />
         <Contact />
-        <Social
-          linkedin="https://www.linkedin.com/in/talcala"
-          github="https://github.com/ThomasMarcel"
-          slack="https://tomalcala.slack.com"
-          twitter="https://twitter.com/ThomasAlcala"
-          skype="https://join.skype.com/invite/xfKeFzPFWsND"
-        />
       </Layout>
     )
   }

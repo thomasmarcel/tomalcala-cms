@@ -50,9 +50,15 @@ function make(post, index, _children) {
                                       className: "column"
                                     }, React.createElement("div", {
                                           className: "is-pulled-right"
-                                        }, React.createElement("i", {
-                                              className: "far fa-clock"
-                                            }), React.createElement("small", undefined, "  " + post.frontmatter.date))))));
+                                        }, React.createElement("span", {
+                                              className: "tag is-link is-medium"
+                                            }, React.createElement("i", {
+                                                  className: "far fa-clock"
+                                                }), React.createElement("small", {
+                                                  style: {
+                                                    marginLeft: "10px"
+                                                  }
+                                                }, post.frontmatter.date)))))));
             }),
           /* initialState */component[/* initialState */10],
           /* retainedProps */component[/* retainedProps */11],

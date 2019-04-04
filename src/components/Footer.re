@@ -22,23 +22,32 @@ let make = (_children) => {
     /* <div onClick={self.handle(handleClick)}> */
     /*   {ReasonReact.string(message)} */
     /* </div>, */
-    <footer className="footer"
-      style=(ReactDOMRe.Style.make(~borderTop="1px solid #333", ()))
-    >
-      <div className="content has-text-centered">
-        <p>
-          <strong>
-            <i className="far fa-copyright" />
-            (str("TomAlcala"))
-          </strong>
-          (str(" Blog and Sandbox by "))
-          <a href="https://github.com/ThomasMarcel" target="_blank">
-            (str("Thomas Alcala Schneider"))
-          </a>
-          (str("."))
-        </p>
-      </div>
-    </footer>
+    <div>
+      <Social
+        linkedin="https://www.linkedin.com/in/talcala"
+        github="https://github.com/ThomasMarcel"
+        slack="https://tomalcala.slack.com"
+        twitter="https://twitter.com/ThomasAlcala"
+        skype="https://join.skype.com/invite/xfKeFzPFWsND"
+      />
+      <footer className="footer"
+        style=(ReactDOMRe.Style.make(~borderTop="1px solid #333", ()))
+      >
+        <div className="content has-text-centered">
+          <p>
+            <strong>
+              <i className="far fa-copyright" />
+              (str("TomAlcala"))
+            </strong>
+            (str(" Blog and Sandbox by "))
+            <a href="https://github.com/ThomasMarcel" target="_blank">
+              (str("Thomas Alcala Schneider"))
+            </a>
+            (str("."))
+          </p>
+        </div>
+      </footer>
+    </div>
 };
 
 /* [@bs.deriving abstract] */

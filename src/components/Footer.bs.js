@@ -3,6 +3,7 @@
 
 var React = require("react");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var Social$ReactTemplate = require("./Social.bs.js");
 
 function str(prim) {
   return prim;
@@ -22,19 +23,19 @@ function make(_children) {
           /* willUpdate */component[/* willUpdate */7],
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function (_self) {
-              return React.createElement("footer", {
-                          className: "footer",
-                          style: {
-                            borderTop: "1px solid #333"
-                          }
-                        }, React.createElement("div", {
-                              className: "content has-text-centered"
-                            }, React.createElement("p", undefined, React.createElement("strong", undefined, React.createElement("i", {
-                                          className: "far fa-copyright"
-                                        }), "TomAlcala"), " Blog and Sandbox by ", React.createElement("a", {
-                                      href: "https://github.com/ThomasMarcel",
-                                      target: "_blank"
-                                    }, "Thomas Alcala Schneider"), ".")));
+              return React.createElement("div", undefined, ReasonReact.element(undefined, undefined, Social$ReactTemplate.make("https://www.linkedin.com/in/talcala", "https://github.com/ThomasMarcel", "https://twitter.com/ThomasAlcala", "https://tomalcala.slack.com", "https://join.skype.com/invite/xfKeFzPFWsND", /* array */[])), React.createElement("footer", {
+                              className: "footer",
+                              style: {
+                                borderTop: "1px solid #333"
+                              }
+                            }, React.createElement("div", {
+                                  className: "content has-text-centered"
+                                }, React.createElement("p", undefined, React.createElement("strong", undefined, React.createElement("i", {
+                                              className: "far fa-copyright"
+                                            }), "TomAlcala"), " Blog and Sandbox by ", React.createElement("a", {
+                                          href: "https://github.com/ThomasMarcel",
+                                          target: "_blank"
+                                        }, "Thomas Alcala Schneider"), "."))));
             }),
           /* initialState */component[/* initialState */10],
           /* retainedProps */component[/* retainedProps */11],
