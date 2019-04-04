@@ -20,7 +20,7 @@ let make = (~title, ~body, ~direction, ~icon, ~background, ~action, _children) =
   render: _self => {
     <div>
       <div className=("bg-image " ++ background)
-        style=(ReactDOMRe.Style.make(~maxHeight="241px", ()))
+        style=(ReactDOMRe.Style.make(~maxHeight="755px", ()))
       >
         <div className="layer opacity-dark" />
       </div>

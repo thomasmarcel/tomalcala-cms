@@ -25,7 +25,7 @@ function make(title, body, direction, icon, background, action, _children) {
               return React.createElement("div", undefined, React.createElement("div", {
                               className: "bg-image " + background,
                               style: {
-                                maxHeight: "241px"
+                                maxHeight: "755px"
                               }
                             }, React.createElement("div", {
                                   className: "layer opacity-dark"
