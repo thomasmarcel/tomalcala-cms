@@ -91,6 +91,7 @@ module.exports = {
           'bg7',
           'bg8',
           'bg9',
+          'layer',
         ]
       },
     }, // must be after other CSS plugins
