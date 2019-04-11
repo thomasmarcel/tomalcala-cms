@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 const Hero = ({ content }) => {
   const { header, subheader } = content
   return (
-    <section className="hero is-medium">
+    <section className="jumbotron hero is-medium">
       <div className="bg-image hero0">
         <div className="layer opacity-dark" />
       </div>
-      <div className="hero-body">
+      <div className="hero-body" style={{paddingTop: '12rem', paddingBottom: '20rem'}}>
         <div className="container">
           <h1 className="header">
             {header}
