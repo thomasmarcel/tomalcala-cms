@@ -35,7 +35,6 @@ export default class IndexPage extends React.Component {
               </div>
             ))}
         </div>
-        <Contact />
         <Simple
           title="Resume"
           body="Check out my resume! I am open for work and collaborations."
@@ -43,13 +42,7 @@ export default class IndexPage extends React.Component {
           action="/img/thomas_alcala-cv-201901-en-m.pdf"
           background="simple0"
         />
-        <Social
-          linkedin="https://www.linkedin.com/in/talcala"
-          github="https://github.com/ThomasMarcel"
-          slack="https://tomalcala.slack.com"
-          twitter="https://twitter.com/ThomasAlcala"
-          skype="https://join.skype.com/invite/xfKeFzPFWsND"
-        />
+        <Contact />
       </Layout>
     )
   }
