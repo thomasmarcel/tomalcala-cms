@@ -2,56 +2,34 @@
 'use strict';
 
 var React = require("react");
-var ReasonReact = require("reason-react/src/ReasonReact.js");
-var Social$ReactTemplate = require("./Social.bs.js");
 
 function str(prim) {
   return prim;
 }
 
-var component = ReasonReact.statelessComponent("Footer");
-
-function make(_children) {
-  return /* record */[
-          /* debugName */component[/* debugName */0],
-          /* reactClassInternal */component[/* reactClassInternal */1],
-          /* handedOffState */component[/* handedOffState */2],
-          /* willReceiveProps */component[/* willReceiveProps */3],
-          /* didMount */component[/* didMount */4],
-          /* didUpdate */component[/* didUpdate */5],
-          /* willUnmount */component[/* willUnmount */6],
-          /* willUpdate */component[/* willUpdate */7],
-          /* shouldUpdate */component[/* shouldUpdate */8],
-          /* render */(function (_self) {
-              return React.createElement("div", undefined, ReasonReact.element(undefined, undefined, Social$ReactTemplate.make("https://www.linkedin.com/in/talcala", "https://github.com/ThomasMarcel", "https://twitter.com/ThomasAlcala", "https://tomalcala.slack.com", "https://join.skype.com/invite/xfKeFzPFWsND", /* array */[])), React.createElement("footer", {
-                              className: "footer",
-                              style: {
-                                borderTop: "1px solid #333"
-                              }
-                            }, React.createElement("div", {
-                                  className: "content has-text-centered"
-                                }, React.createElement("p", undefined, React.createElement("strong", undefined, React.createElement("i", {
-                                              className: "far fa-copyright"
-                                            }), "TomAlcala"), " Blog and Sandbox by ", React.createElement("a", {
-                                          href: "https://github.com/ThomasMarcel",
-                                          target: "_blank"
-                                        }, "Thomas Alcala Schneider"), "."))));
-            }),
-          /* initialState */component[/* initialState */10],
-          /* retainedProps */component[/* retainedProps */11],
-          /* reducer */component[/* reducer */12],
-          /* jsElementWrapped */component[/* jsElementWrapped */13]
-        ];
+function Footer(Props) {
+  return React.createElement("footer", {
+              className: "footer",
+              style: {
+                borderTop: "1px solid #333"
+              }
+            }, React.createElement("div", {
+                  className: "content has-text-centered"
+                }, React.createElement("p", undefined, React.createElement("strong", undefined, React.createElement("i", {
+                              className: "far fa-copyright"
+                            }), "TomAlcala"), " Blog and Sandbox by ", React.createElement("a", {
+                          href: "https://github.com/ThomasMarcel",
+                          target: "_blank"
+                        }, "Thomas Alcala Schneider"), ".")));
 }
 
-var $$default = ReasonReact.wrapReasonForJs(component, (function (_jsProps) {
-        return make(/* array */[]);
-      }));
+var make = Footer;
+
+var $$default = Footer;
 
 exports.str = str;
-exports.component = component;
 exports.make = make;
 exports.$$default = $$default;
 exports.default = $$default;
 exports.__esModule = true;
-/* component Not a pure module */
+/* react Not a pure module */
