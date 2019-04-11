@@ -26,10 +26,10 @@
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.4.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
     "react-helmet": "^5.2.0",
-    "reason-react": "^0.5.3",
+    "reason-react": ">=0.7.0",
     "uuid": "^3.2.1"
   },
   "keywords": [
@@ -61,7 +61,7 @@
     "@commitlint/config-conventional": "^7.3.1",
     "@fortawesome/fontawesome-free": "^5.6.3",
     "babel-eslint": "^10.0.1",
-    "bs-platform": "^4.0.18",
+    "bs-platform": "^5.0.1",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-loader": "^2.1.1",
