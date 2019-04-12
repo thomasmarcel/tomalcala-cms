@@ -174,3 +174,61 @@ let default = make;
 ```
 
 Finally, the `let default = make;` allows the function to be exported as default.
+
+## Reducer Components
+
+Here let's take the component from the old documentation. I do have some real world examples, but they're too big and might confuse more than anything. So here's the reducer component as the deprecated Record API describes:
+
+```
+type state = {
+  count: int,
+  show: bool,
+};
+
+type action =
+  | Click
+  | Toggle;[@bs.deriving abstract]
+type jsProps = {
+  greeting: string,
+};
+
+let component = ReasonReact.reducerComponent("Example");
+
+let make = (~greeting, _children) => {
+  ...component,
+
+  initialState: () => {count: 0, show: true},
+
+  reducer: (action, state) =>
+    switch (action) {
+    | Click => ReasonReact.Update({...state, count: state.count + 1})
+    | Toggle => ReasonReact.Update({...state, show: !state.show})
+    },
+
+  render: self => {
+    let message =
+      "You've clicked this " ++ string_of_int(self.state.count) ++ " times(s)";
+    <div>
+      <button onClick=(_event => self.send(Click))>
+        (ReasonReact.string(message))
+      </button>
+      <button onClick=(_event => self.send(Toggle))>
+        (ReasonReact.string("Toggle greeting"))
+      </button>
+      (
+        self.state.show
+          ? ReasonReact.string(greeting)
+          : ReasonReact.null
+      )
+    </div>;
+  },
+};
+
+let default =
+  ReasonReact.wrapReasonForJs(~component, jsProps =>
+    make(
+      ~greeting=jsProps->greetingGet,
+      [||],
+    )
+  );
+```
