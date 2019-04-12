@@ -237,17 +237,17 @@ It was mostly pretty straightforward, except what was already mentioned for the 
 
 ```
 [@react.component]
-let make = (~greeting, _children) => {
+let make = (~greeting) => {
   let (count, setCount) = React.useState(() => 0);
   let (show, setShow) = React.useState(() => true);
 
   let message = "You've clicked this " ++ string_of_int(count) ++ " times(s)";
 
   <div>
-    <button onClick={_event => setCount(count + 1)} >
+    <button onClick={_event => setCount(_count => count + 1)} >
       (React.string(message))
     </button>
-    <button onClick={_event => setShow(!show)}>
+    <button onClick={_event => setShow(_show => !show)}>
       (React.string("Toggle greeting"))
     </button>
     (
@@ -260,4 +260,98 @@ let make = (~greeting, _children) => {
 
 let default = make;
 ```
-Shorter and cleaner.
+
+Shorter and cleaner. Let's analyze it.
+
+First of all, the state and action types are removed, same as the component definition.
+
+```
+type state = {
+  count: int,
+  show: bool,
+};
+
+type action =
+  | Click
+  | Toggle;[@bs.deriving abstract]
+type jsProps = {
+  greeting: string,
+};
+
+let component = ReasonReact.reducerComponent("Example");
+```
+
+Same as before, the make function now has a decorator above, and the `...component` extension is removed.
+
+```
+[@react.component]
+let make = (~greeting) => {
+```
+
+And now the state attributes and setters definition, so instead of having the state type
+
+```
+type state = {
+  count: int,
+  show: bool,
+};
+```
+
+And the initial state value setting
+
+```
+initialState: () => {count: 0, show: true},
+```
+
+We have one line per attribute, that defines the variable, the setter, the default value from which the variable type is inferred:
+
+```
+  let (count, setCount) = React.useState(() => 0);
+  let (show, setShow) = React.useState(() => true);
+```
+
+Cool!
+
+So now all that was using the state attributes like `self.state.count`, as in the snippet below
+
+```
+    let message =
+      "You've clicked this " ++ string_of_int(self.state.count) ++ " times(s)";
+```
+
+Now uses the variable name directly:
+
+```
+let message = "You've clicked this " ++ string_of_int(count) ++ " times(s)";
+```
+
+And the syntax of for click events also changed in the JSX code, we went from sending an action from the action type enum to the reducer function
+
+```
+<button onClick=(_event => self.send(Click))>
+```
+
+To a more straightforward call to the setter. Also note the use of brackets instead of parenthesis
+
+```
+<button onClick={_event => setCount(_count => count + 1)} >
+```
+
+And as before for stateless components, all the wrapping for JS is removed, so all the code below
+
+```
+let default =
+  ReasonReact.wrapReasonForJs(~component, jsProps =>
+    make(
+      ~greeting=jsProps->greetingGet,
+      [||],
+    )
+  );
+```
+
+is replaced by a simple default declaration:
+
+```
+let default = make;
+```
+And this is it!
