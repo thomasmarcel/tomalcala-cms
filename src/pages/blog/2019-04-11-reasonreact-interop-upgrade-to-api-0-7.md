@@ -39,6 +39,24 @@ And under the `dependencies`, bump up `react`, `react-dom` and `reason-react`:
 
 And install (`$ npm run install` or `$ yarn install`). This takes care of the project scope changes. Now let's get into details in components.
 
+## Importing the Components from ReactJS
+
+This part won't change. There is a call in the documentation, like this:
+
+```
+const MyComponent = require('./path/to/Component.bs.js').make;
+
+<MyComponent name="Regina" />
+```
+
+But I'm not sure how this would translate to ES6, so I'd rather keep it like I have them already:
+
+```
+import Footer from '../components/Footer.bs'
+```
+
+and use a trick to export a default from the ReasonReact component. You'll see how it's done further below.
+
 ## Stateless Components
 
 Of course, the simplest components to upgrade are stateless components. And it's actually kind of nice to start with those, as it actually results in removing the sketchy `wrapReasonforJS` and `jsProps` code. Let's start with an example of previous code, detail the elements that changed, and get into the new API syntax.
@@ -288,7 +306,7 @@ Same as before, the make function now has a decorator above, and the `...compone
 let make = (~greeting) => {
 ```
 
-And now the state attributes and setters definition, so instead of having the state type
+And now the state attributes and setters definition, so instead of having the state type, declared before the component declaration
 
 ```
 type state = {
@@ -354,4 +372,5 @@ is replaced by a simple default declaration:
 ```
 let default = make;
 ```
-And this is it!
+
+And this is it! The components should compile correctly and be usable as before.
