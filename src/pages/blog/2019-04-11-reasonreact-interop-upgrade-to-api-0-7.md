@@ -374,3 +374,71 @@ let default = make;
 ```
 
 And this is it! The components should compile correctly and be usable as before.
+
+## Caveats
+
+So here I'll mention a shortcoming that was already present in the old API, and that may well be something I'm not using right. The parsing of props from ReactJS to ReasonReact is pretty great now for basic types, where it still falls short is for JS objects.
+
+Let me take an example, with Gatsby posts, that come from GraphQL parsing of Markdown files, and that may well be a misuse of my end, I know about the Js BuckleScript library, maybe I should use more types from it. In any case, Here's a post object example:
+
+```
+Object {
+  excerpt: "... Lorem Ipsum…",
+  fields: {
+    slug: "/blog/2019-01-17-its-alive/"
+  },
+  frontmatter: {
+    date: "January 18, 2019",
+    templateKey: "blog-post",
+    title: "It's Alive!"
+  },
+  id: "b5a3e20e-ebbb-5abf-a06e-5258aa0cc6c4"
+}
+```
+
+So it's an objects with attributes that are basic types or objects too.
+
+Well, treating it as another simple prop, like
+
+```
+[@react.component]
+let make = (~post: post, ~index: int) => {
+  Js.log(post.fields.slug);
+```
+
+Will result in a compilation error, stating that the property of index 0 is undefined or something. And yeah, if you check the post prop, `post.fields` is undefined.
+
+This was already happening with the old Record API, the trick I used was to define a bunch of types with the `[@bs.deriving abstract]` decorator above them:
+
+```
+[@bs.deriving abstract]
+type frontmatter = {
+  date: string,
+  templateKey: string,
+  title: string
+};
+
+[@bs.deriving abstract]
+type fields = {
+  slug: string
+};
+
+[@bs.deriving abstract]
+type post = {
+  excerpt: string,
+  frontmatter: frontmatter,
+  fields: fields,
+  id: string
+};
+```
+
+So this would generate the accessor functions for the attributes as mentioned [here in the BuckleScript doc](https://bucklescript.github.io/docs/en/object#accessors), and call the BuckleScript accessors (like `post->idGet`, or `idGet(post)` but the latter looks uglier when chained) to obtain the content, like in the following JSX snippet:
+
+```
+        <Link className="has-text-light bold"
+        href=(post->fieldsGet->slugGet) >
+          (str(post->frontmatterGet->titleGet))
+        </Link>
+```
+
+So this isn't new, it's still unpleasant, and still forces you to have 3 documentation tabs opened: [ReasonReact](https://reasonml.github.io/reason-react/en/), [Reason](https://reasonml.github.io/en/) and [BuckleScript](https://bucklescript.github.io/en/). Not cool.
