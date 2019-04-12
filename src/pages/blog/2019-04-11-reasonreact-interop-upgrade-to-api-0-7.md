@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: ReasonReact Interop Upgrade to API 0.7
+title: ReasonReact Upgrade to 0.7 (for JS interop)
 date: 2019-04-12T02:25:57.988Z
 description: Rewriting ReasonReact components called from ReactJS components.
 tags:
