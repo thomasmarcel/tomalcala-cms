@@ -232,3 +232,32 @@ let default =
     )
   );
 ```
+
+It was mostly pretty straightforward, except what was already mentioned for the stateless components. Here is the new version of it:
+
+```
+[@react.component]
+let make = (~greeting, _children) => {
+  let (count, setCount) = React.useState(() => 0);
+  let (show, setShow) = React.useState(() => true);
+
+  let message = "You've clicked this " ++ string_of_int(count) ++ " times(s)";
+
+  <div>
+    <button onClick={_event => setCount(count + 1)} >
+      (React.string(message))
+    </button>
+    <button onClick={_event => setShow(!show)}>
+      (React.string("Toggle greeting"))
+    </button>
+    (
+      show
+        ? React.string(greeting)
+        : React.null
+    )
+  </div>
+};
+
+let default = make;
+```
+Shorter and cleaner.
