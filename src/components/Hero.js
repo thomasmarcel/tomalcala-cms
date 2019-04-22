@@ -8,7 +8,7 @@ const Hero = ({ content }) => {
       <div className="bg-image hero0">
         <div className="layer opacity-dark" />
       </div>
-      <div className="hero-body" style={{paddingTop: '12rem', paddingBottom: '20rem'}}>
+      <div className="hero-body" style={{paddingTop: '7rem', paddingBottom: '7rem'}}>
         <div className="container">
           <h1 className="header">
             {header}
