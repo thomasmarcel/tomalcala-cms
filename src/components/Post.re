@@ -46,7 +46,7 @@ let make = (~post: post, ~index: int) => {
       </p>
       <div className="columns">
         <div className="column">
-          <Link className="btn parallelogram has-background-link"
+          <Link className="btn parallelogram action"
             href=(post->fieldsGet->slugGet) >
             <div className="skew-fix">
               (str("Read More"))

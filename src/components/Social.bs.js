@@ -18,12 +18,12 @@ function Social(Props, _children) {
   var skype = Props.skype;
   return React.createElement("div", {
               style: {
-                backgroundColor: "#002266"
+                backgroundColor: "#c3e88d"
               }
             }, React.createElement("div", {
                   className: "content",
                   style: {
-                    borderBottom: "1px solid #333",
+                    borderBottom: "0",
                     padding: "2em 4em",
                     position: "relative"
                   }

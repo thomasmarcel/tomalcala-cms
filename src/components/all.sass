@@ -21,6 +21,9 @@ $primary-invert: $kaldi-red-invert
 $body-color: #f2f2f2
 $body-bgcolor: #131313
 
+$primary-color: #c3e88d
+$secondary-color: #ec7078
+
 @import "~bulma"
 
 body
@@ -34,17 +37,24 @@ code
 
 pre
   background-color: black
-  border: 1px solid #c3e88d
+  border: 1px solid $primary-color
 
 pre code
   display: block
   color: white
 
 a
-  color: #c3e88d
+  color: $primary-color
 
 a:hover
-  color: #ec7078
+  color: $secondary-color
+
+section, footer
+  position: relative
+  background-color: $body-bgcolor
+
+footer
+  border: 0
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -166,14 +176,26 @@ strong
   height: 100%
   width: 100%
 
+// purple, indigo, blue, green, yellow, orange, red
+
 .bg-image.bg0
-  background-image: url('/img/bg0.png')
+  // background-image: url('/img/bg0.png')
+  background-image: linear-gradient(to right, red , yellow)
 
 .bg-image.bg1
-  background-image: url('/img/bg1.png')
+  background-image: linear-gradient(to right, green, indigo)
+
+.bg-image.bg2
+  background-image: linear-gradient(to right, purple, orange)
+
+.bg-image.bg3
+  background-image: linear-gradient(to right, yellow, blue)
+
+.bg-image.bg4
+  background-image: linear-gradient(to right, indigo, red)
 
 .bg-image.simple0
-  background-image: url('/img/simple0.png')
+  background-image: linear-gradient(to right, orange, blue)
 
 .layer
   background-color: rgba(75, 86, 160, 0.7)
@@ -192,15 +214,11 @@ strong
 .opacity-dark
   opacity: .666
 
-section, footer
-  position: relative
-  background-color: $body-bgcolor
-
 .bg-image.hero0
   background-image: url('/img/hero0.png')
 
 .social i
-  color: #f2f2f2
+  color: $body-bgcolor
 
 .jumbotron .hero-body
   padding-top: 18rem
@@ -212,3 +230,11 @@ section, footer
 .navbar a:hover
   color: inherit
   background-color: inherit
+
+.btn.action
+  background-color: $primary-color
+  color: $body-bgcolor
+  border: 0
+
+.btn.action:hover
+  background-color: $secondary-color

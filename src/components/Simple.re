@@ -12,7 +12,7 @@ let make = (~title, ~body, ~direction, ~icon, ~background, ~action, _children) =
     </div>
     <div
       className="content"
-      style=(ReactDOMRe.Style.make(~borderBottom="1px solid #333",
+      style=(ReactDOMRe.Style.make(~borderBottom="0",
                                    ~padding="2em 4em",
                                    ~position="relative", ()))
     >
@@ -22,7 +22,7 @@ let make = (~title, ~body, ~direction, ~icon, ~background, ~action, _children) =
           <p>
             (str(body))
           </p>
-          <Link className="btn parallelogram has-background-link"
+          <Link className="btn parallelogram action"
             href=(action) >
             <div className="skew-fix">
               (str("Read More"))
