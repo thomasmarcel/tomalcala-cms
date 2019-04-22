@@ -31,13 +31,14 @@ const Navbar = class extends React.Component {
  render() {
    return (
   
-  <nav className="navbar has-background-black" role="navigation" aria-label="main-navigation">
+  <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
     <div className="container is-fluid">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item" title="Logo">
           <i className="fab fa-empire fa-2x" />&nbsp;
-          TomAlcala
+          <b>Tom</b>Alcala
           {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
+            {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
         </Link>
         {/* Hamburger menu */}
         <div className="navbar-burger burger" data-target="navMenu">

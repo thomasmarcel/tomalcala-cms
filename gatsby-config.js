@@ -94,6 +94,8 @@ module.exports = {
           'layer',
           'hero0',
           'simple0',
+          'pre',
+          'code',
         ]
       },
     }, // must be after other CSS plugins

@@ -2,6 +2,14 @@
 // @import "~@fortawesome/fontawesome-free/scss/fontawesome"
 @import "~@fortawesome/fontawesome-free/css/all.css"
 
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Libre+Franklin')
+// font-family: 'Libre Franklin', sans-serif;
+// font-family: 'Fira Sans', sans-serif;
+
+@font-face
+  font-family: 'Public Sans'
+  src: url(../../lib/fonts/PublicSans-Regular.woff2) format('opentype')
+
 // Config vars
 // Kalidi logo brand color: #FD461E
 $kaldi-red: #D64000
@@ -10,11 +18,27 @@ $kaldi-red-invert: #fff
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 // $body-color: #333
-// $body-color: #f2f2f2
-$body-color: #131313
+$body-color: #f2f2f2
+$body-bgcolor: #131313
+
+@import "~bulma"
 
 body
-  background-color: #737373
+  background-color: $body-bgcolor
+  font-family: 'Public Sans', $family-primary
+
+code
+  font-family: 'Fira Sans', sans-serif
+  color: white
+  background-color: black
+
+pre
+  background-color: black
+  border: 1px solid #c3e88d
+
+pre code
+  display: block
+  color: white
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -59,8 +83,6 @@ body
 
 .wide .content
   padding: 1rem 2rem 0 2rem
-
-@import "~bulma"
 
 .content
   h1, h2, h3, h4, h5, label
@@ -166,7 +188,7 @@ strong
 
 section, footer
   position: relative
-  background-color: #737373
+  background-color: $body-bgcolor
 
 .bg-image.hero0
   background-image: url('/img/hero0.png')
@@ -177,6 +199,9 @@ section, footer
 .jumbotron .hero-body
   padding-top: 18rem
   padding-bottom: 18rem
+
+.navbar a
+  font-weight: inherit
 
 .navbar a:hover
   color: inherit
