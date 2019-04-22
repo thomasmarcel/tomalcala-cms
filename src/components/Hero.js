@@ -10,10 +10,10 @@ const Hero = ({ content }) => {
       </div>
       <div className="hero-body" style={{paddingTop: '7rem', paddingBottom: '7rem'}}>
         <div className="container">
-          <h1 className="header">
+          <h1 className="header is-size-1">
             {header}
           </h1>
-          <h2 className="subheader">
+          <h2 className="subheader is-size-5">
             {subheader}
           </h2>
         </div>
