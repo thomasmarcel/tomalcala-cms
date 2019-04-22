@@ -59,7 +59,7 @@ const Navbar = class extends React.Component {
           Resume
         </a>
         <Link className="navbar-item" to="/sandbox">
-          Sandbox
+          Projects &amp; Sandbox
         </Link>
       </div>
       <div className="navbar-end has-text-centered">
