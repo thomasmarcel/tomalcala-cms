@@ -30,7 +30,7 @@ let make = (~post: post, ~index: int) => {
     </div>
     <div
       className="content"
-      style=(ReactDOMRe.Style.make(~borderBottom="1px solid #333",
+      style=(ReactDOMRe.Style.make(~borderBottom="0",
                                    ~padding="2em 4em",
                                    ~position="relative", ()))
       key=(post->idGet)
@@ -46,7 +46,7 @@ let make = (~post: post, ~index: int) => {
       </p>
       <div className="columns">
         <div className="column">
-          <Link className="btn parallelogram has-background-link"
+          <Link className="btn parallelogram action"
             href=(post->fieldsGet->slugGet) >
             <div className="skew-fix">
               (str("Read More"))

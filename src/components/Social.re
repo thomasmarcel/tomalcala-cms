@@ -5,11 +5,11 @@ let component = ReasonReact.statelessComponent("Social");
 [@react.component]
 let make = (~linkedin, ~github, ~twitter, ~slack, ~skype, _children) => {
   <div
-    style=(ReactDOMRe.Style.make(~backgroundColor="#002266", ()))
+    style=(ReactDOMRe.Style.make(~backgroundColor="#c3e88d", ()))
   >
     <div
       className="content"
-      style=(ReactDOMRe.Style.make(~borderBottom="1px solid #333",
+      style=(ReactDOMRe.Style.make(~borderBottom="0",
                                    ~padding="2em 4em",
                                    ~position="relative", ()))
     >

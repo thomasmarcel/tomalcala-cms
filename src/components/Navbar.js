@@ -32,12 +32,13 @@ const Navbar = class extends React.Component {
    return (
   
   <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
-    <div className="container">
+    <div className="container is-fluid">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item" title="Logo">
           <i className="fab fa-empire fa-2x" />&nbsp;
-          TomAlcala
+          <b>Tom</b>Alcala
           {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
+            {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
         </Link>
         {/* Hamburger menu */}
         <div className="navbar-burger burger" data-target="navMenu">
@@ -68,8 +69,14 @@ const Navbar = class extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>Curious About the Source Code?</span>&nbsp;&nbsp;
-          <i className="fab fa-github" />
+          <div className="tags has-addons">
+            <span className="tag">
+              Curious About the Source Code?
+            </span>
+            <span className="tag is-primary">
+              <i className="fab fa-github" />
+            </span>
+          </div>
         </a>
       </div>
       </div>

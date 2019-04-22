@@ -82,7 +82,7 @@ export default class Contact extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="btn parallelogram has-background-link" type="submit">
+                  <button className="btn parallelogram action" type="submit">
                     <div className="skew-fix">
                       Send
                       <i className="fas fa-caret-right" style={{marginLeft: '10px'}} ></i>
