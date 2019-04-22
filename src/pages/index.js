@@ -27,12 +27,14 @@ export default class IndexPage extends React.Component {
               Latest Stories
             </h1>
           </div>
-          {posts
-            .map(({ node: post }, index) => (
-              <div key={post.id} >
-                <Post post={post} index={index} />
-              </div>
-            ))}
+          <div className="columns is-multiline">
+            {posts
+              .map(({ node: post }, index) => (
+                <div key={post.id} className="column">
+                  <Post post={post} index={index} />
+                </div>
+              ))}
+          </div>
         </div>
         <Simple
           title="Resume"
@@ -64,7 +66,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 140)
           id
           fields {
             slug

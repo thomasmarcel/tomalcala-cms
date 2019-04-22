@@ -30,7 +30,7 @@ let make = (~post: post, ~index: int) => {
     </div>
     <div
       className="content"
-      style=(ReactDOMRe.Style.make(~borderBottom="1px solid #333",
+      style=(ReactDOMRe.Style.make(~borderBottom="0",
                                    ~padding="2em 4em",
                                    ~position="relative", ()))
       key=(post->idGet)

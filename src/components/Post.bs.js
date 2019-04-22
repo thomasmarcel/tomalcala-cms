@@ -20,7 +20,7 @@ function Post(Props) {
                   key: post.id,
                   className: "content",
                   style: {
-                    borderBottom: "1px solid #333",
+                    borderBottom: "0",
                     padding: "2em 4em",
                     position: "relative"
                   }
