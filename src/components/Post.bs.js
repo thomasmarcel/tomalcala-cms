@@ -20,7 +20,7 @@ function Post(Props) {
                   key: post.id,
                   className: "content",
                   style: {
-                    borderBottom: "1px solid #333",
+                    borderBottom: "0",
                     padding: "2em 4em",
                     position: "relative"
                   }
@@ -28,7 +28,7 @@ function Post(Props) {
                       className: "columns"
                     }, React.createElement("div", {
                           className: "column"
-                        }, ReasonReact.element(undefined, undefined, Gatsby$ReactTemplate.Link[/* make */0](post.fields.slug, "btn parallelogram has-background-link", undefined, /* array */[React.createElement("div", {
+                        }, ReasonReact.element(undefined, undefined, Gatsby$ReactTemplate.Link[/* make */0](post.fields.slug, "btn parallelogram action", undefined, /* array */[React.createElement("div", {
                                         className: "skew-fix"
                                       }, "Read More", React.createElement("i", {
                                             className: "fas fa-caret-right",

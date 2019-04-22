@@ -2,19 +2,59 @@
 // @import "~@fortawesome/fontawesome-free/scss/fontawesome"
 @import "~@fortawesome/fontawesome-free/css/all.css"
 
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Libre+Franklin')
+// font-family: 'Libre Franklin', sans-serif;
+// font-family: 'Fira Sans', sans-serif;
+
+@font-face
+  font-family: 'Public Sans'
+  src: url(../../lib/fonts/PublicSans-Regular.woff2) format('opentype')
+
 // Config vars
 // Kalidi logo brand color: #FD461E
-$kaldi-red: #D64000
+$kaldi-red: #d64000
 $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 // $body-color: #333
-// $body-color: #f2f2f2
-$body-color: #131313
+$body-color: #f2f2f2
+$body-bgcolor: #131313
+
+$primary-color: #c3e88d
+$secondary-color: #ec7078
+
+@import "~bulma"
 
 body
-  background-color: #737373
+  background-color: $body-bgcolor
+  font-family: 'Public Sans', $family-primary
+
+code
+  font-family: 'Fira Sans', sans-serif
+  color: white
+  background-color: black
+
+pre
+  background-color: black
+  border: 1px solid $primary-color
+
+pre code
+  display: block
+  color: white
+
+a
+  color: $primary-color
+
+a:hover
+  color: $secondary-color
+
+section, footer
+  position: relative
+  background-color: $body-bgcolor
+
+footer
+  border: 0
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -59,8 +99,6 @@ body
 
 .wide .content
   padding: 1rem 2rem 0 2rem
-
-@import "~bulma"
 
 .content
   h1, h2, h3, h4, h5, label
@@ -138,14 +176,26 @@ strong
   height: 100%
   width: 100%
 
+// purple, indigo, blue, green, yellow, orange, red
+
 .bg-image.bg0
-  background-image: url('/img/bg0.png')
+  // background-image: url('/img/bg0.png')
+  background-image: linear-gradient(to right, red , yellow)
 
 .bg-image.bg1
-  background-image: url('/img/bg1.png')
+  background-image: linear-gradient(to right, green, indigo)
+
+.bg-image.bg2
+  background-image: linear-gradient(to right, purple, orange)
+
+.bg-image.bg3
+  background-image: linear-gradient(to right, yellow, blue)
+
+.bg-image.bg4
+  background-image: linear-gradient(to right, indigo, red)
 
 .bg-image.simple0
-  background-image: url('/img/simple0.png')
+  background-image: linear-gradient(to right, orange, blue)
 
 .layer
   background-color: rgba(75, 86, 160, 0.7)
@@ -164,20 +214,27 @@ strong
 .opacity-dark
   opacity: .666
 
-section, footer
-  position: relative
-  background-color: #737373
-
 .bg-image.hero0
   background-image: url('/img/hero0.png')
 
 .social i
-  color: #f2f2f2
+  color: $body-bgcolor
 
 .jumbotron .hero-body
   padding-top: 18rem
   padding-bottom: 18rem
 
+.navbar a
+  font-weight: inherit
+
 .navbar a:hover
   color: inherit
   background-color: inherit
+
+.btn.action
+  background-color: $primary-color
+  color: $body-bgcolor
+  border: 0
+
+.btn.action:hover
+  background-color: $secondary-color
