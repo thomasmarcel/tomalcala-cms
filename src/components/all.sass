@@ -54,7 +54,16 @@ section, footer
   background-color: $body-bgcolor
 
 footer
+  background-color: transparent !important
+  color: $body-color
   border: 0
+  color:
+  a
+    color: $primary-color
+  a:hover
+    color: $secondary-color
+  strong
+    color: $body-color
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -102,16 +111,16 @@ footer
 
 .content
   h1, h2, h3, h4, h5, label
-    color: #f2f2f2
+    color: $body-color
 
-.navbar, .footer
+.navbar
   background-color: transparent
   a
     font-weight: bold
   .navbar-item, strong, a
-    color: #f2f2f2
+    color: $body-color
   a:hover, a:focus
-    color: #3273dc
+    color: $primary-color
 
 .column h1.is-centered i
   display: table
@@ -155,7 +164,7 @@ footer
   transform: skew(-20deg)
 
 .btn.parallelogram
-  color: #f2f2f2
+  color: $body-color
   font-size: 1rem
   font-weight: 400
   line-height: 1.5
@@ -238,3 +247,12 @@ strong
 
 .btn.action:hover
   background-color: $secondary-color
+
+.navbar-end i
+  margin-left: .3rem
+
+.navbar-menu
+  background-color: transparent
+
+.navbar-burger
+  color: $body-color

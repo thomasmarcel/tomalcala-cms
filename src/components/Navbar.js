@@ -69,14 +69,8 @@ const Navbar = class extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="tags has-addons">
-            <span className="tag">
-              Curious About the Source Code?
-            </span>
-            <span className="tag is-primary">
-              <i className="fab fa-github" />
-            </span>
-          </div>
+          Curious About the Source Code?
+          <i className="fab fa-github" />
         </a>
       </div>
       </div>
