@@ -31,8 +31,8 @@ const Navbar = class extends React.Component {
  render() {
    return (
   
-  <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
-    <div className="container">
+  <nav className="navbar has-background-black" role="navigation" aria-label="main-navigation">
+    <div className="container is-fluid">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item" title="Logo">
           <i className="fab fa-empire fa-2x" />&nbsp;
@@ -68,8 +68,14 @@ const Navbar = class extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>Curious About the Source Code?</span>&nbsp;&nbsp;
-          <i className="fab fa-github" />
+          <div className="tags has-addons">
+            <span className="tag">
+              Curious About the Source Code?
+            </span>
+            <span className="tag is-primary">
+              <i className="fab fa-github" />
+            </span>
+          </div>
         </a>
       </div>
       </div>

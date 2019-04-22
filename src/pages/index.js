@@ -2,16 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Hero from '../components/Hero'
+// import Hero from '../components/Hero'
 import Contact from '../components/Contact'
 import Post from '../components/Post.bs'
 import Simple from '../components/Simple.bs'
 import Social from '../components/Social.bs'
 
-const content = {
-  header: 'Hello and Welcome!',
-  subheader: "This is my personal portfolio and sandbox to test new tools, frameworks, etc, everything development-related that sounds cool, and that I have time for..."
-}
+// const content = {
+//   header: 'Hello and Welcome!',
+//   subheader: "This is my personal portfolio and sandbox to test new tools, frameworks, etc, everything development-related that sounds cool, and that I have time for..."
+// }
 
 export default class IndexPage extends React.Component {
   render() {
@@ -20,7 +20,6 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <Hero content={content} />
         <div className="wide container is-fluid">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">
@@ -43,6 +42,7 @@ export default class IndexPage extends React.Component {
           background="simple0"
         />
         <Contact />
+        <Social />
       </Layout>
     )
   }
