@@ -43,3 +43,32 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+
+  - name: "projects"
+    label: "Projects"
+    folder: "src/pages/projects"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "URL", name: "url", widget: "string"}
+      - {label: "Creation Date", name: "date", widget: "date", format: "YY"}
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options:
+          - { label: "In Progress", value: "in_progress" }
+          - { label: "Delivered/Finished", value: "finished" }
+          - { label: "Released", value: "released" }
+          - { label: "Dropped", value: "dropped" }
+        default: "in_progress"
+      - label: "Thumbnail"
+        name: "thumbnail"
+        widget: "image"
+        default: "/img/default-placeholder.png"
+        media_library:
+          config:
+            multiple: false
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
