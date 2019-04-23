@@ -38,10 +38,9 @@ function randBackground(param) {
   var diff = Random.$$int(4) + 2 | 0;
   var rand1 = Random.$$int(max);
   var match = (rand1 + diff | 0) >= max;
-  var rand2 = match ? diff - max | 0 : rand1 + diff | 0;
+  var rand2 = match ? (rand1 + diff | 0) - max | 0 : rand1 + diff | 0;
   var match$1 = Random.$$int(2);
   var direction = match$1 !== 0 ? "to left" : "to right";
-  console.log(String(rand1) + (", " + String(rand2)));
   return "linear-gradient(" + (direction + (", " + (List.nth(colors, rand1) + (", " + (List.nth(colors, rand2) + ")")))));
 }
 

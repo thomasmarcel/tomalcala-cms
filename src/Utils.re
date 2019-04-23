@@ -21,7 +21,7 @@ let randBackground = () => {
 
 	let rand1 = Random.int(max);
 	let rand2 = switch(rand1 + diff >= max) {
-		| true => diff - max
+		| true => rand1 + diff - max
 		| false => rand1 + diff
 	};
 
@@ -29,7 +29,6 @@ let randBackground = () => {
 		| 0 => "to right"
 		| _ => "to left"
 	};
-	Js.log(string_of_int(rand1) ++ ", " ++ string_of_int(rand2));
 
 	"linear-gradient(" ++ direction ++ ", " ++ List.nth(colors, rand1) ++ ", " ++
 		List.nth(colors, rand2) ++ ")"
