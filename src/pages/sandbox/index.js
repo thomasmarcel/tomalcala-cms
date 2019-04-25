@@ -94,6 +94,17 @@ const projects = [
     position: 'Lead Developer',
     description: 'Facebook app in Ruby, custom CRM in PHP.'
   },
+  {
+    title: 'Carl\'s Jr. Jackpot',
+    date: '2012',
+    url: 'https://apps.facebook.com/carlsjr-jackpot/',
+    tagline: 'Win Carl\'s Jr. gifts with a Lottery.',
+    position: 'Lead Developer',
+    description: 'Facebook app simulating a slot machine, written in PHP ' +
+    'and Javascript/JQuery, and using a custom CRM written in PHP to keep ' +
+    'track of registrations and gifts. There was also a customer daily ' +
+    'registration report.'
+  },
 ]
 
 export default class Index extends React.Component {

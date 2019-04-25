@@ -4,7 +4,7 @@ let str = ReasonReact.string;
 [@react.component]
 let make = () => {
   <footer className="footer"
-    style=(ReactDOMRe.Style.make(~borderTop="1px solid #333", ()))
+    style=(ReactDOMRe.Style.make(~borderTop="0", ()))
   >
     <div className="content has-text-centered">
       <p>
