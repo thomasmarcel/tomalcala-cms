@@ -11,7 +11,7 @@ function Footer(Props) {
   return React.createElement("footer", {
               className: "footer",
               style: {
-                borderTop: "1px solid #333"
+                borderTop: "0"
               }
             }, React.createElement("div", {
                   className: "content has-text-centered"
