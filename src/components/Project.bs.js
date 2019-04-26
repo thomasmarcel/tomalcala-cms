@@ -18,7 +18,7 @@ function Project(Props) {
                       className: "image is-4by3"
                     }, React.createElement("img", {
                           alt: "Placeholder image",
-                          src: "https://bulma.io/images/placeholders/1280x960.png"
+                          src: project.image
                         }))), React.createElement("div", {
                   className: "card-content"
                 }, React.createElement("div", {
@@ -29,7 +29,7 @@ function Project(Props) {
                               className: "image is-48x48"
                             }, React.createElement("img", {
                                   alt: "Placeholder image",
-                                  src: "https://bulma.io/images/placeholders/96x96.png"
+                                  src: project.thumbnail
                                 }))), React.createElement("div", {
                           className: "media-content"
                         }, React.createElement("p", {

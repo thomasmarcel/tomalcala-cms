@@ -7,6 +7,8 @@ type project = {
   url: string,
   tagline: string,
   position: string,
+  image: string,
+  thumbnail: string,
   description: string
 };
 
@@ -15,7 +17,7 @@ let make = (~project: project, ~index: int) => {
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
-        <img src="https://bulma.io/images/placeholders/1280x960.png"
+        <img src=(project->imageGet)
         alt="Placeholder image" />
       </figure>
     </div>
@@ -23,7 +25,7 @@ let make = (~project: project, ~index: int) => {
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src="https://bulma.io/images/placeholders/96x96.png"
+            <img src=(project->thumbnailGet)
             alt="Placeholder image" />
           </figure>
         </div>
