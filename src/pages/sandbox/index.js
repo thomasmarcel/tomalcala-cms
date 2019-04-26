@@ -107,6 +107,17 @@ const projects = [
   },
 ]
 
+const sandboxes = [
+  {
+    title: 'TomAlcala.com',
+    date: '2019',
+    url: 'https://tomalcala.com',
+    tagline: 'Blog & Sandbox (where you currently are)',
+    position: 'Lead Developer',
+    description: 'App written with GatsbyJS, using ReactJS, ReasonML and ReasonReact, GraphQL..'
+  },
+]
+
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -124,6 +135,16 @@ export default class Index extends React.Component {
                   .map((project, index) => (
                       <div className="column is-one-third-desktop" key={index}>
                         <Project project={project} index={index} />
+                      </div>
+                  ))}
+          </div>
+
+          <h1 className="is-size-2">Sandbox</h1>
+          <div className="columns is-multiline">
+            {sandboxes
+                  .map((sandbox, index) => (
+                      <div className="column is-one-third-desktop" key={index}>
+                        <Project project={sandbox} index={index} />
                       </div>
                   ))}
           </div>
