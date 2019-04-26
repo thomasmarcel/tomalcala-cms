@@ -108,8 +108,8 @@ const projects = [
     url: 'https://apps.facebook.com/miseleccion-deseos/',
     tagline: 'Send New Year wishes to the Mexican national soccer team.',
     position: 'Lead Developer',
-    image: '/img/eevet.png',
-    thumbnail: '/img/eevet-thumb.png',
+    image: '/img/clicker360.png',
+    thumbnail: '/img/clicker360-thumb.png',
     description: 'Facebook app in Ruby, custom CRM in PHP.'
   },
   {
@@ -118,8 +118,8 @@ const projects = [
     url: 'https://apps.facebook.com/carlsjr-jackpot/',
     tagline: 'Win Carl\'s Jr. gifts with a Lottery.',
     position: 'Lead Developer',
-    image: '/img/eevet.png',
-    thumbnail: '/img/eevet-thumb.png',
+    image: '/img/clicker360.png',
+    thumbnail: '/img/clicker360-thumb.png',
     description: 'Facebook app simulating a slot machine, written in PHP ' +
     'and Javascript/JQuery, and using a custom CRM written in PHP to keep ' +
     'track of registrations and gifts. There was also a customer daily ' +
