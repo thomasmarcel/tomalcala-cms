@@ -20,7 +20,7 @@ function Simple(Props, _children) {
   return React.createElement("div", undefined, React.createElement("div", {
                   className: "bg-image " + background,
                   style: {
-                    maxHeight: "241px"
+                    border: "0"
                   }
                 }, React.createElement("div", {
                       className: "layer opacity-dark"

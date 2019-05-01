@@ -35,6 +35,14 @@ let make = (~post: post, ~index: int) => {
                                    ~position="relative", ()))
       key=(post->idGet)
     >
+      <div className="columns">
+        <div className="column">
+          <div className="is-pulled-right">
+            <i className="far fa-clock" />
+            <small>(str("  " ++ post->frontmatterGet->dateGet))</small>
+          </div>
+        </div>
+      </div>
       <p>
         <Link className="has-text-light bold"
         href=(post->fieldsGet->slugGet) >
@@ -52,14 +60,9 @@ let make = (~post: post, ~index: int) => {
               (str("Read More"))
               <i className="fas fa-caret-right"
               style=(ReactDOMRe.Style.make(~marginLeft="10px", ())) ></i>
+              <i className="fas fa-caret-right" />
             </div>
           </Link>
-        </div>
-        <div className="column">
-          <div className="is-pulled-right">
-            <i className="far fa-clock" />
-            <small>(str("  " ++ post->frontmatterGet->dateGet))</small>
-          </div>
         </div>
       </div>
     </div>

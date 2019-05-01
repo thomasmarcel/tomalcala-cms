@@ -24,7 +24,15 @@ function Post(Props) {
                     padding: "2em 4em",
                     position: "relative"
                   }
-                }, React.createElement("p", undefined, ReasonReact.element(undefined, undefined, Gatsby$ReactTemplate.Link[/* make */0](post.fields.slug, "has-text-light bold", undefined, /* array */[post.frontmatter.title]))), React.createElement("p", undefined, post.excerpt), React.createElement("div", {
+                }, React.createElement("div", {
+                      className: "columns"
+                    }, React.createElement("div", {
+                          className: "column"
+                        }, React.createElement("div", {
+                              className: "is-pulled-right"
+                            }, React.createElement("i", {
+                                  className: "far fa-clock"
+                                }), React.createElement("small", undefined, "  " + post.frontmatter.date)))), React.createElement("p", undefined, ReasonReact.element(undefined, undefined, Gatsby$ReactTemplate.Link[/* make */0](post.fields.slug, "has-text-light bold", undefined, /* array */[post.frontmatter.title]))), React.createElement("p", undefined, post.excerpt), React.createElement("div", {
                       className: "columns"
                     }, React.createElement("div", {
                           className: "column"
@@ -35,13 +43,9 @@ function Post(Props) {
                                             style: {
                                               marginLeft: "10px"
                                             }
-                                          }))]))), React.createElement("div", {
-                          className: "column"
-                        }, React.createElement("div", {
-                              className: "is-pulled-right"
-                            }, React.createElement("i", {
-                                  className: "far fa-clock"
-                                }), React.createElement("small", undefined, "  " + post.frontmatter.date))))));
+                                          }), React.createElement("i", {
+                                            className: "fas fa-caret-right"
+                                          }))]))))));
 }
 
 var make = Post;

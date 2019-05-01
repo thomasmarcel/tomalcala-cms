@@ -5,7 +5,7 @@ import Hero from '../../components/Hero'
 import Project from '../../components/Project.bs'
 
 const header = {
-  header: 'Projects & Sandbox',
+  header: 'Projects',
   subheader: 'Here Be Dragons!'
 }
 
@@ -151,7 +151,6 @@ export default class Index extends React.Component {
       <Layout>
         <Hero content={header} />
         <div className="container">
-          <h1 className="is-size-2">Projects</h1>
           <div className="columns is-multiline">
             {projects
                   .map((project, index) => (

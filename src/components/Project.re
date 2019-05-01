@@ -18,7 +18,7 @@ let make = (~project: project, ~index: int) => {
     <div className="card-image">
       <figure className="image is-4by3">
         <img src=(project->imageGet)
-        alt="Placeholder image" />
+        alt=(project->titleGet) />
       </figure>
     </div>
     <div className="card-content">
@@ -26,7 +26,7 @@ let make = (~project: project, ~index: int) => {
         <div className="media-left">
           <figure className="image is-48x48">
             <img src=(project->thumbnailGet)
-            alt="Placeholder image" />
+            alt=(project->titleGet) />
           </figure>
         </div>
         <div className="media-content">
