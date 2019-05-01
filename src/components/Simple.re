@@ -6,7 +6,7 @@ let str = ReasonReact.string;
 let make = (~title, ~body, ~direction, ~icon, ~background, ~action, _children) => {
   <div>
     <div className=("bg-image " ++ background)
-      style=(ReactDOMRe.Style.make(~maxHeight="241px", ()))
+      style=(ReactDOMRe.Style.make(~border="0", ()))
     >
       <div className="layer opacity-dark" />
     </div>

@@ -17,7 +17,7 @@ function Project(Props) {
                 }, React.createElement("figure", {
                       className: "image is-4by3"
                     }, React.createElement("img", {
-                          alt: "Placeholder image",
+                          alt: project.title,
                           src: project.image
                         }))), React.createElement("div", {
                   className: "card-content"
@@ -28,7 +28,7 @@ function Project(Props) {
                         }, React.createElement("figure", {
                               className: "image is-48x48"
                             }, React.createElement("img", {
-                                  alt: "Placeholder image",
+                                  alt: project.title,
                                   src: project.thumbnail
                                 }))), React.createElement("div", {
                           className: "media-content"
