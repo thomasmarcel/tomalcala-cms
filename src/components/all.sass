@@ -1,0 +1,274 @@
+@import "~bulma/sass/utilities/initial-variables"
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome"
+@import "~@fortawesome/fontawesome-free/css/all.css"
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Libre+Franklin')
+// font-family: 'Libre Franklin', sans-serif;
+// font-family: 'Fira Sans', sans-serif;
+
+@font-face
+  font-family: 'Public Sans'
+  src: url(../../lib/fonts/PublicSans-Regular.woff2) format('opentype')
+
+// Config vars
+// Kalidi logo brand color: #FD461E
+$kaldi-red: #d64000
+$kaldi-red-invert: #fff
+
+$primary: $kaldi-red
+$primary-invert: $kaldi-red-invert
+// $body-color: #333
+$body-color: #f2f2f2
+$body-bgcolor: #131313
+
+$primary-color: #c3e88d
+$secondary-color: #ec7078
+
+$alt-bgcolor: #2e2f2f
+$alt-color: aliceblue
+
+// $strong-color: #d5d5d5
+$strong-color: #fff
+
+@import "~bulma"
+
+body
+  background-color: $body-bgcolor
+  font-family: 'Public Sans', $family-primary
+
+code
+  font-family: 'Fira Sans', sans-serif
+  color: white
+  background-color: black
+
+pre
+  background-color: black
+  border: 1px solid $primary-color
+
+pre code
+  display: block
+  color: white
+
+a
+  color: $primary-color
+
+a:hover
+  color: $secondary-color
+
+section, footer
+  position: relative
+  background-color: $body-bgcolor
+
+footer
+  background-color: transparent !important
+  color: $body-color
+  border: 0
+  color:
+  a
+    color: $primary-color
+  a:hover
+    color: $secondary-color
+
+strong
+  color: $strong-color
+
+h1, h2, h3, h4, h5
+  font-family: 'Fira Sans', $family-primary
+
+.navbar .navbar-menu
+  box-shadow:none !important
+
+.content .taglist
+  list-style: none
+  margin-bottom: 0
+  margin-left: 0
+  margin-right: 1.5rem
+  margin-top: 1.5rem
+  display: flex
+  flex-wrap: wrap
+  justify-content: left
+  align-items: center
+  li
+    padding: 0 2rem 1rem 0
+    margin-bottom: 1.5rem
+    margin-top: 0
+
+// Helper Classes
+.full-width-image-container
+  width: 100vw
+  height: 400px
+  position: relative
+  left: 50%
+  right: 50%
+  margin: 5em -50vw
+  background-size: cover
+  background-position: bottom
+  display: flex
+  justify-content: center
+  align-items: center
+
+.margin-top-0
+  margin-top: 0 !important
+
+.container.is-fluid.wide
+  max-width: none
+  width: auto
+  margin-left: 0
+  margin-right: 0
+
+.wide .content
+  padding: 1rem 2rem 0 2rem
+
+.content
+  h1, h2, h3, h4, h5, label
+    color: $body-color
+
+.navbar
+  background-color: transparent
+  a
+    font-weight: bold
+  .navbar-item, strong, a
+    color: $body-color
+  a:hover, a:focus
+    color: $primary-color
+
+.column h1.is-centered i
+  display: table
+  margin-left: auto
+  margin-right: auto
+
+.column.valign
+  display: table
+  height: 100%
+  min-height: auto
+  h1
+    vertical-align: middle
+    display: table-cell
+
+.is-pulled-right
+  float: right
+
+.bold
+  font-weight: bold
+
+.right-btn
+  float: left
+  width: 0
+  height: 0
+  border-top: 36px solid red
+  border-right: 36px solid transparent
+
+.btn
+  background: #D64000
+  display: inline-block
+  padding: .5em 2em
+  text-decoration: none
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186)
+  border-width: 1px
+  border-style: solid
+
+.btn:hover
+  box-shadow: 0 0 0 
+
+.parallelogram
+  transform: skew(-20deg)
+
+.btn.parallelogram
+  color: $body-color
+  font-size: 1rem
+  font-weight: 400
+  line-height: 1.5
+
+.skew-fix
+  display: inline-block
+  transform: skew(20deg)
+
+strong
+.title
+  color: inherit
+
+.bg-image
+  background-position: center center
+  background-attachment: fixed
+  background-size: cover
+  position: absolute
+  height: 100%
+  width: 100%
+
+// purple, indigo, blue, green, yellow, orange, red
+
+.bg-image.bg0
+  // background-image: url('/img/bg0.png')
+  background-image: linear-gradient(to right, red , yellow)
+
+.bg-image.bg1
+  background-image: linear-gradient(to right, green, indigo)
+
+.bg-image.bg2
+  background-image: linear-gradient(to right, purple, orange)
+
+.bg-image.bg3
+  background-image: linear-gradient(to right, yellow, blue)
+
+.bg-image.bg4
+  background-image: linear-gradient(to right, indigo, red)
+
+.bg-image.simple0
+  background-image: linear-gradient(to right, orange, blue)
+
+.layer
+  background-color: rgba(75, 86, 160, 0.7)
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.opacity-light
+  opacity: .333
+
+.opacity-medium
+  opacity: .5
+
+.opacity-dark
+  opacity: .666
+
+.bg-image.hero0
+  background-image: linear-gradient(to right, red , yellow)
+
+.social i
+  color: $body-bgcolor
+
+.jumbotron .hero-body
+  padding-top: 18rem
+  padding-bottom: 18rem
+
+.navbar a
+  font-weight: inherit
+
+.navbar a:hover
+  color: inherit
+  background-color: inherit
+
+.btn.action
+  background-color: $primary-color
+  color: $body-bgcolor
+  border: 0
+
+.btn.action:hover
+  background-color: $secondary-color
+
+.navbar-end i
+  margin-left: .3rem
+
+.navbar-menu
+  background-color: transparent
+
+.navbar-burger
+  color: $body-color
+
+.card
+  margin-top: 2rem
+  .card-content
+    color: $alt-color
+    background-color: $alt-bgcolor

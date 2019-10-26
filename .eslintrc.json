@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "rules": {
+    "strict": 0,
+    "react/display-name": [0]
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ]
+}
